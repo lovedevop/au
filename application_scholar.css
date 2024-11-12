@@ -1,0 +1,121 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ffd166 0%, #ff6b6b 100%);
+    color: #fff;
+    animation: gradientAnimation 10s ease infinite;
+    }
+    
+    @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    }
+    
+    h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: formAnimation 1s ease-in-out;
+    }
+    
+    @keyframes formAnimation {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    }
+    
+    fieldset {
+    border: none;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+    }
+    
+    label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="date"]:focus,
+    select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    input[type="submit"] {
+    display: block;
+    width: 200px;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ffd166 0%, #ff6b6b 100%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: buttonAnimation 1s ease-in-out infinite alternate;
+    }
+    
+    @keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+    }
+    
+    input[type="submit"]:hover {
+    background-color: #ff4136;
+    }

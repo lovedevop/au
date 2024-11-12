@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIGARH UNIVERSITY</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="animated-text">CONTACT - ALIGARH UNIVERSITY</h1>
+    </header>
+
+
+    <main>
+        <section id="contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions or need further information? We're here to help!</p>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>ALIGARH UNIVERSITY</p>
+                            <p>123 Main Street, ALIGARH, UP 202001</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 12345 67890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@ALIGARH_UNI.edu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Send a Message</h2>
+                    <form id="myForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <input type="submit" value="submit">
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; ALIGARH UNIVERSITY</p>
+    </footer>
+
+    
+<script>
+        document.getElementById('myForm').onsubmit = function(event) {
+          event.preventDefault(); // Prevent the default form submit action
+          // Perform your validation or form submission logic here
+    
+          // If everything is valid, redirect to the success page
+          window.location.href = 'success_contact.html'; // The name of your success page file
+        };
+</script>
+</body>
+</html>

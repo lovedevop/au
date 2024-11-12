@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columbia University Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0052A5;
+            --secondary-color: #FFD700;
+            --background-color: rgba(245, 245, 245, 0.9);
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://example.com/path-to-your-image.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: rgba(0, 82, 165, 0.9);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .alert {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .calendar {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        #calendar-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .calendar-nav {
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .calendar-nav:hover {
+            color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        #calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #calendar-table th, #calendar-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #calendar-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        #calendar-table td {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #calendar-table td:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .event-list {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .event-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-date {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .event-time {
+            font-style: italic;
+            color: #666;
+        }
+
+        .event-title {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .event-location {
+            color: #666;
+        }
+
+        footer {
+            background-color: rgba(0, 82, 165, 0.9);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Columbia Events</div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Calendar</a>
+                    <a href="#">Categories</a>
+                    <a href="#">Submit Event</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="alert">
+            <strong>Morningside Campus/Limited Access:</strong> Effective immediately, access to the Morningside campus has been limited to students residing in residential buildings on campus (Carman, Furnald, John Jay, Hartley, Wallach, East Campus and Wien) and employees who provide essential services to campus buildings, labs and residential student life (for example, Dining, Public Safety, and building maintenance staff). <a href="#">Read More</a>
+        </div>
+
+        <section class="calendar">
+            <h2>Event Calendar</h2>
+            <div id="calendar-container">
+                <div class="calendar-header">
+                    <span class="calendar-nav" id="prev-month">&lt;</span>
+                    <h3 id="current-month-year"></h3>
+                    <span class="calendar-nav" id="next-month">&gt;</span>
+                </div>
+                <table id="calendar-table"></table>
+            </div>
+        </section>
+
+        <section class="event-list">
+            <h2>Upcoming Events</h2>
+            <div id="events-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Columbia University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const events = [
+            { date: '2024-06-24', time: '10:00 AM - 5:00 PM EST', title: 'Quantitative Genomics Training', location: 'Online Event' },
+            { date: '2024-06-24', time: '12:00 PM - 1:30 PM EST', title: 'Neurology Bereavement Support Group', location: 'Online' },
+            { date: '2024-06-25', time: '9:00 AM - 10:15 AM EST', title: 'State of the Mpox Epidemic: Global, National, and Local Perspectives', location: 'Online' },
+            { date: '2024-06-25', time: '10:00 AM - 5:00 PM EST', title: 'Quantitative Genomics Training', location: 'Online Event' },
+            { date: '2024-06-26', time: '10:00 AM - 5:00 PM EST', title: 'SQL Boot Camp', location: 'Allan Rosenfield Building, 722 W. 168 St., New York, NY 10032' },
+            { date: '2024-06-26', time: '12:00 PM - 1:00 PM EST', title: 'The Biology of Aging Seminar Series Presents', location: 'Herbert Irving Comprehensive Cancer Center, 1130 St. Nicholas Ave., New York, NY 10032' },
+            { date: '2024-06-27', time: '10:00 AM - 5:00 PM EST', title: 'SQL Boot Camp', location: 'Allan Rosenfield Building, 722 W. 168 St., New York, NY 10032' },
+            { date: '2024-06-27', time: '11:00 AM - 12:00 PM EST', title: 'SOLER Journal Club', location: 'Online Event' },
+            { date: '2024-06-27', time: '4:00 PM - 5:00 PM EST', title: 'IICD Journal Club', location: 'Schermerhorn Hall, 1198 Amsterdam Ave., New York, NY 10027' },
+            { date: '2024-06-27', time: '4:00 PM - 5:15 PM EST', title: 'CUIMC Women in Science Lecture Series', location: 'College of Physicians and Surgeons, 630 W. 168 St., New York, NY 10032' },
+            { date: '2024-06-28', time: '10:00 AM - 5:00 PM EST', title: 'SQL Boot Camp', location: 'Allan Rosenfield Building, 722 W. 168 St., New York, NY 10032' },
+            { date: '2024-06-28', time: '6:00 PM - 9:00 PM EST', title: 'CAA Boston | 2024 Ivy Alumni Softball Game 2: v CORNELL', location: 'Off-campus' },
+            { date: '2024-06-29', time: '8:30 AM - 12:00 PM EST', title: 'CAA Singapore | Mandala Retro Disco Cocktail Party', location: 'Off-campus' },
+            { date: '2024-06-29', time: '3:00 PM - 6:00 PM EST', title: 'CAA Boston | Improv Class with CSz Boston!', location: 'Off-campus' },
+            { date: '2024-06-30', time: '5:00 PM - 8:00 PM EST', title: 'CAA DC | Rooftop Party Summer BBQ', location: 'Off-campus' },
+            { date: '2024-07-01', time: '9:00 AM - 5:30 PM EST', title: 'Code Rigor and Reproducibility with R Boot Camp', location: 'Allan Rosenfield Building, 722 W. 168 St., New York, NY 10032' },
+            { date: '2024-07-05', time: '9:30 AM - 10:30 AM EST', title: 'Admissions Information Session (Webinar)', location: 'Online Event' },
+            { date: '2024-07-08', time: '10:00 AM - 5:00 PM EST', title: 'NIH Grant Writing Boot Camp', location: 'Online Event' },
+            { date: '2024-07-09', time: '10:00 AM - 5:00 PM EST', title: 'NIH Grant Writing Boot Camp', location: 'Online Event' },
+            { date: '2024-07-09', time: '1:30 PM - 2:30 PM EST', title: 'Dr. Chien-Jen Chen: Molecular Epidemiology and Public Health Policy', location: 'Allan Rosenfield Building, 722 W. 168 St., New York, NY 10032' },
+            { date: '2024-07-09', time: '3:00 PM - 4:00 PM EST', title: 'Careers in Educational Development (for grad students)', location: 'Butler Library, 535 W. 114 St., New York, NY 10027' },
+            { date: '2024-07-10', time: '7/10 - 7/11', title: 'CUIMC Summer Institute for Teaching and Learning', location: 'Butler Library, 535 W. 114 St., New York, NY 10027' },
+            { date: '2024-07-10', time: '12:00 PM - 1:30 PM EST', title: 'Content Strategy, SEO and Information Architecture Training', location: 'Online Event' },
+            { date: '2024-07-10', time: '1:00 PM - 2:00 PM EST', title: 'Neurology Access to Care Orientation', location: 'Online Event' },
+            { date: '2024-07-11', time: '7/11 - 7/12', title: '(POCUS) Point of Care Ultrasonography for Nephrologists 2024', location: 'Roy And Diana Vagelos Education Center, 104 Haven Ave., New York, NY 10032' },
+            { date: '2024-07-11', time: '10:00 AM - 3:00 PM EST', title: 'Creating Compelling Research Narrative Workshop', location: 'Online' },
+            { date: '2024-07-15', time: '10:00 AM - 5:30 PM EST', title: 'The PI\'s Business of Research Boot Camp', location: 'TBD' }
+        ];
+
+        let currentDate = new Date(2024, 5, 24); // Start with June 24, 2024
+
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+
+            document.getElementById('current-month-year').textContent = new Date(year, month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            let html = '<tr>';
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            for (let day of days) {
+                html += `<th>${day}</th>`;
+            }
+            html += '</tr><tr>';
+
+            for (let i = 0; i < firstDay; i++) {
+                html += '<td></td>';
+            }
+
+            for (let i = 1; i <= daysInMonth; i++) {
+                html += `<td>${i}</td>`;
+        if ((i + firstDay) % 7 === 0) {
+            html += '</tr><tr>';
+        }
+    }
+
+    // Fill in the remaining cells if the last row is not complete
+    while ((daysInMonth + firstDay) % 7 !== 0) {
+        html += '<td></td>';
+        daysInMonth++;
+    }
+
+    html += '</tr>';
+
+    document.getElementById('calendar').innerHTML = html;
+}
+
+// Call the function to render the calendar
+renderCalendar();

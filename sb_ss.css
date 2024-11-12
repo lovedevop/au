@@ -1,0 +1,111 @@
+#student-services {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+}
+
+#student-services h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: headingAnimation 1s ease-in-out;
+}
+
+@keyframes headingAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service {
+    max-width: 300px;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: serviceAnimation 0.8s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+@keyframes serviceAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service i {
+    font-size: 3rem;
+    color: #8b33f0;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.service:hover i {
+    color: #8b33f0;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.service:hover h3 {
+    color: #8b33f0;
+}
+
+.service p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #8b33f0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8b33f0;
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

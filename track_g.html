@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Grievance</title>
+<link rel="stylesheet" href="track_g.css">
+</head>
+<body>
+<header>
+<h1>Track Your Grievance</h1>
+</header>
+<main>
+<section id="track-form">
+<h2>Enter Your Grievance ID</h2>
+<form id="trackGrievanceForm">
+<label for="grievanceId">Grievance ID:</label>
+<input type="text" id="grievanceId" name="grievanceId" required>
+<button type="submit">Track</button>
+</form>
+</section>
+<section id="status-display" style="display: none;">
+<h2>Grievance Status</h2>
+<p id="statusMessage"></p>
+</section>
+</main>
+<footer>
+<p>&copy;2024 Sandbox. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById('trackGrievanceForm').addEventListener('submit', function(event) {
+event.preventDefault();
+var grievanceId = document.getElementById('grievanceId').value;
+
+var statusMessage = 'The status of grievance ID ' + grievanceId + ' is: In Progress';
+document.getElementById('statusMessage').innerText = statusMessage;
+document.getElementById('status-display').style.display = 'block';
+});
+</script>
+</body>
+</html>

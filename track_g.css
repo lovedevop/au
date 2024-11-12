@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    }
+    
+    header {
+        background: linear-gradient(to bottom right, #f1c40f, #e67e22);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    }
+    
+    main {
+    padding: 20px;
+    }
+    
+    #track-form, #status-display {
+    width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #track-form h2, #status-display h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    
+    #track-form label, #track-form input, #track-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    
+    #track-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+    
+    #track-form button {
+    padding: 10px;
+    background: linear-gradient(to bottom right, #f1c40f, #e67e22);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+    
+    #track-form button:hover {
+    background-color: #0056b3;
+    }
+    
+    footer {
+        background: linear-gradient(to bottom right, #f1c40f, #e67e22);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom:0;
+    }
+    

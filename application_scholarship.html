@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration/Sign up Form</title>
+<link rel="stylesheet" href="application_scholar.css">
+</head>
+<body>
+<h2>Registration Form</h2>
+<form id="signupform">
+
+<fieldset>
+<legend>Personal Information</legend>
+<label for="firstname">First Name:</label><br>
+<input type="text" id="firstname" name="firstname" required><br><br>
+
+<label for="lastname">Last Name:</label><br>
+<input type="text" id="lastname" name="lastname" required><br><br>
+
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email" required><br><br>
+
+<label for="phone">Phone Number:</label><br>
+<input type="tel" id="phone" name="phone" required><br><br>
+<label for="dob">Date of Birth:</label><br>
+<input type="date" id="dob" name="dob" required><br><br>
+
+<label for="gender">Gender:</label><br>
+<select id="gender" name="gender" required><br><br>
+<option value="">Select</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="trans">Trans</option>
+</select>
+</fieldset>
+
+<!-- Address Information -->
+<fieldset>
+<legend>Address Information</legend>
+<label for="address">Address:</label><br>
+<input type="text" id="address" name="address" required><br><br>
+
+<label for="city">City:</label><br>
+<input type="text" id="city" name="city" required><br><br>
+
+<label for="state">  State  :</label><br>
+<select id="state" name="state" required><br><br>
+<option value="SelectState">SelectState</option>
+<option value="andhra_pradesh">Andhra Pradesh</option>
+<option value="arunachal_pradesh">Arunachal Pradesh</option>
+<option value="assam">Assam</option>
+<option value="bihar">Bihar</option>
+<option value="chhattisgarh">Chhattisgarh</option>
+<option value="goa">Goa</option>
+<option value="gujarat">Gujarat</option>
+<option value="haryana">Haryana</option>
+<option value="himachal_pradesh">Himachal Pradesh</option>
+<option value="jharkhand">Jharkhand</option>
+<option value="karnataka">Karnataka</option>
+<option value="kerala">Kerala</option>
+<option value="madhya_pradesh">Madhya Pradesh</option>
+<option value="maharashtra">Maharashtra</option>
+<option value="manipur">Manipur</option>
+<option value="meghalaya">Meghalaya</option>
+<option value="mizoram">Mizoram</option>
+<option value="nagaland">Nagaland</option>
+<option value="odisha">Odisha</option>
+<option value="punjab">Punjab</option>
+<option value="rajasthan">Rajasthan</option>
+<option value="sikkim">Sikkim</option>
+<option value="tamil_nadu">Tamil Nadu</option>
+<option value="telangana">Telangana</option>
+<option value="tripura">Tripura</option>
+<option value="uttar_pradesh">Uttar Pradesh</option>
+<option value="uttarakhand">Uttarakhand</option>
+<option value="west_bengal">West Bengal</option>
+</select>
+
+<br><br><label for="zip">Pin Code:</label><br>
+<input type="text" id="zip" name="zip" required><br><br>
+</fieldset>
+<!--last section or security check-->
+<fieldset>
+<label for="securityCode">Security Code:</label><br>
+<input type="text" id="securityCode" name="securityCode" required><br><br>
+<label for="upload document">Upload Document</label><br>
+<input type="file" accept="image/*"
+capture="user"><br><br>
+</fieldset>
+</form>
+<div>
+    <br>
+    <a href="http://127.0.0.1:5500/prj_sandbox.html/scholar-_success.html">
+    <input type="submit" value="submit">
+    </a>
+    </br>
+    </div>
+<script src="application_scholar.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.animated-text {
+    font-size: 3rem;
+    background-image: linear-gradient(90deg, #ffffff, #ffd166, #ffffff);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+h2 i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.process-diagram {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+}
+
+.step i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffd166;
+}
+
+#criteria ul {
+    list-style-type: none;
+}
+
+#criteria li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#criteria i {
+    margin-right: 10px;
+    color: #ffd166;
+}
+
+.chart-container {
+    height: 300px;
+    margin-bottom: 30px;
+    
+}
+
+
+.btn-apply {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ffd166 0%, #ff6b6b 100%);
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-apply:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.note {
+    background-color: rgba(255, 209, 102, 0.2);
+    border-left: 5px solid #ffd166;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .process-diagram {
+        flex-direction: column;
+    }
+    .step {
+        margin-bottom: 20px;
+    }
+}
